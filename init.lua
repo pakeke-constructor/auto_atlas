@@ -40,5 +40,5 @@ function atlas:add(sprite, quad)
     end
 end
 
-return atlas
+return setmetatable( atlas, {__call = atlas.new} )
 
