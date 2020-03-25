@@ -25,7 +25,7 @@ function atlas:add(sprite, quad)
     local height = sprite:getHeight()
 
     if quad then
-        assert(quad:typeOf("quad"), " atlas:add( image, [quad] )  expected optional arg [quad] to be of type \n quad. instead, got type:  "..tostring(type(sprite)))
+        assert(quad:typeOf("quad"), " atlas:add( image, [quad] )  expected optional arg [quad] to be of type \n quad. instead, got type:  "..tostring(type(quad)))
         local new = self.binpack:insert(width+1, height+1)
         lg.setCanvas(self.canvas)
             lg.draw(sprite, quad, new.x, new.y)
