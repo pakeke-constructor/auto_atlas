@@ -2,6 +2,12 @@
 automatic sprite atlas constructor, using leafi's 2d packer.
 
 Not yet tested
+
+!!!!
+TODO:
+Back up the canvas with ImageData, 
+because love.window.setMode calls wipe all canvases. 
+!!!!
 ```lua
 local new_atlas = require "atlas_path/init.lua"
 
