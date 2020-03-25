@@ -9,8 +9,8 @@ local atlas = {}
 local atlas_mt = { __index = atlas }
 
 atlas.new = function(x, y)
-    local x = 2048 or x
-    local y = 2048 or y
+    local x = x or 2048
+    local y = y or 2048
     return setmetatable({
         width, height = x, y,
         binpack = binpack(x, y),
