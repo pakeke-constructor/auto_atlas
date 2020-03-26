@@ -19,6 +19,10 @@ local monkey = A:add( love.graphics.newImage("monkey.png") )
 -- "monkey" is now a quad to be used with atlas.
 
 function love.draw()
-   love.graphics.draw(A, monkey, x, y)
+   love.graphics.draw(A.image, monkey, x, y)
+   -- OR, an easier way::
+   
+   A:draw( monkey, x, y )      -- executes love.graphics.draw normally, is just easier.
+   
 end
 ```
