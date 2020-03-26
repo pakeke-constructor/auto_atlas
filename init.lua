@@ -25,8 +25,9 @@ function atlas:draw(quad, x, y, r, sx, sy, ox, oy, kx, ky )
     lg.draw( self.image, quad, x, y, r, sx, sy, ox, oy, kx, ky )
 end
 
-function atlas:add(sprite, quad)
-    assert(sprite:typeOf("image"), " atlas:add( image, [quad] )  expected image to be of type \n Image. instead, got type:  "..tostring(type(sprite)))
+function atlas:add( sprite, quad )
+    assert(sprite, " atlas:add(sprite) missing compulsory first argument: sprite.\n Arg sprite must be an image path, or love image.")
+    
     lg.push()
     lg.reset()
 
