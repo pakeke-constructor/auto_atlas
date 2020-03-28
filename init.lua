@@ -59,7 +59,7 @@ function atlas:add(sprite, quad)
         lg.pop()
         local ret_quad = lg.newQuad(new.x, new.y, width, height, self.width, self.height)
         if self.default then
-            sprite_path = sprite_path:gsub(sprite_path, "")
+            sprite_path = sprite_path:gsub(self.path, "")
             :gsub(".png","")
             self.default[sprite_path] = ret_quad
         end
