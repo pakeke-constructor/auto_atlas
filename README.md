@@ -18,9 +18,9 @@ local atlas = new_atlas(2000, 2000)
 local monkey = atlas:add("sprites/animals/monkey.png")  -- Adds to atlas
 
 function love.draw()
-  A:draw( monkey, 20, 50 )   -- supports all args from lg.draw
+  atlas:draw( monkey, 20, 50 )   -- supports all args from lg.draw
   -- or, equivalently:
-  love.graphics.draw( A.image, monkey, 20, 50 )
+  love.graphics.draw( atlas.image, monkey, 20, 50 )
 end
 ```
 And thats it!
