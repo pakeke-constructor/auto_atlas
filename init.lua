@@ -29,7 +29,7 @@ function atlas:add(sprite, quad)
     if not (type(sprite) == "string") then
         assert(sprite:typeOf("Image"), " atlas:add( image, [quad] )  expected image to be of type \n Image. instead, got type:  "..tostring(type(sprite)))
     end
-    lg.push()
+    lg.push( "all" )
     lg.reset()
 
 
