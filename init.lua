@@ -29,7 +29,7 @@ function atlas:add(sprite, quad)
     if type(sprite) == "string" then
         goto str
     end
-    assert(sprite:typeOf("image"), " atlas:add( image, [quad] )  expected image to be of type \n Image. instead, got type:  "..tostring(type(sprite)))
+    assert(sprite:typeOf("Image"), " atlas:add( image, [quad] )  expected image to be of type \n Image. instead, got type:  "..tostring(type(sprite)))
     ::str::
     lg.push()
     lg.reset()
@@ -68,7 +68,7 @@ function atlas:add(sprite, quad)
 
     -- Is image  +  quad.
     if quad then
-        assert(quad:typeOf("quad"), " atlas:add( image, [quad] )  expected optional arg [quad] to be of type \n quad. instead, got type:  "..tostring(type(quad)))
+        assert(quad:typeOf("Quad"), " atlas:add( image, [quad] )  expected optional arg [quad] to be of type \n quad. instead, got type:  "..tostring(type(quad)))
         local _, _, width, height = quad:getViewport()
         local new = self.binpack:insert(width+1, height+1)
         -- Converting Image to Canvas:
