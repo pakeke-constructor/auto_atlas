@@ -30,7 +30,7 @@ That is everything you need to know.
 
 
 # Optional ease-of-use
-Here are some tricks that may come in handy:
+Here are some optional tricks that may come in handy:
 ```lua
 local atlas = new_atlas(2000, 2000)    
 
@@ -40,7 +40,7 @@ local atlas = new_atlas(2000, 2000)
 atlas.path = "sprites/animals/"
 
 
---   Set default table to add new sprites to:   (optional)
+--   Set default table to add new sprites to:
 local quads = {}
 atlas.default = quads
 --   This will add the quad to the table automatically, with the name as the key.
