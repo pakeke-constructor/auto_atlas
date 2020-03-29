@@ -1,7 +1,8 @@
 # auto_atlas
 lightweight automatic sprite atlas constructor, using leafi's 2d packer.
+Thanks github.com/speakk & AimeJohnson for all the great help!
 
-- Initialization
+### Construction:
 
 Can create as many atlases as you want, however 1 atlas is most efficient.
 ```lua
@@ -13,7 +14,7 @@ local atlas = new_atlas(2000, 2000)
 ```
 
 
-- Usage:
+### Usage:
 ```lua
 local monkey = atlas:add("sprites/animals/monkey.png")  -- Adds to atlas
 
