@@ -45,6 +45,9 @@ function atlas:add(sprite, quad)
         sprite = lg.newImage(sprite_path)
         local width,height = sprite:getWidth(), sprite:getHeight()
         local new = self.binpack:insert(width+1, height+1)
+        
+        assert(new, "Image didn't fit! Make a new atlas")
+        
         -- Converting Image to Canvas:
         local temp_canvas = lg.newCanvas(width, height)
         lg.setCanvas(temp_canvas)
@@ -69,6 +72,9 @@ function atlas:add(sprite, quad)
         assert(quad:typeOf("Quad"), " atlas:add( image, [quad] )  expected optional arg [quad] to be of type \n quad. instead, got type:  "..tostring(type(quad)))
         local _, _, width, height = quad:getViewport()
         local new = self.binpack:insert(width+1, height+1)
+        
+        assert(new, "quad didn't fit! Make a new atlas")
+        
         -- Converting Image to Canvas:
         local temp_canvas = lg.newCanvas(width, height)
         lg.setCanvas(temp_canvas)
@@ -84,6 +90,9 @@ function atlas:add(sprite, quad)
     else
         local width, height = sprite:getWidth(), sprite:getHeight()
         local new = self.binpack:insert(width+1, height+1)
+        
+        assert(new, "Image didn't fit! Make a new atlas")
+        
         -- Converting Image to Canvas:
         local temp_canvas = lg.newCanvas(width, height)
         lg.setCanvas(temp_canvas)
