@@ -9,7 +9,7 @@ Can create as many atlases as you want, however 1 atlas is most efficient.
 local new_atlas = require "atlas_path/init.lua"
 
 local atlas = new_atlas(2000, 2000)    
--- Creates new atlas, of size 2000*2000.
+-- Creates new atlas, of size 2000 * 2000 pixels.
 --default size is 2048 * 2048
 ```
 
