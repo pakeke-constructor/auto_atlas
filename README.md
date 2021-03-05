@@ -6,7 +6,7 @@ Thanks github.com/speakk & AimeJohnson for all the great help!
 
 Can create as many atlases as you want, however 1 atlas is most efficient.
 ```lua
-local new_atlas = require "atlas_path/init.lua"
+local new_atlas = require "atlas_path/auto_atlas.lua"
 
 local atlas = new_atlas(2000, 2000)    
 -- Creates new atlas, of size 2000 * 2000 pixels.
