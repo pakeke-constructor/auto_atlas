@@ -1,5 +1,5 @@
 
-local PATH = (...):gsub('[%.%/]init','')
+local PATH = (...):gsub('[%.%/]auto_atlas','')
 local binpack = require(PATH..".binpack")
 
 local lg = love.graphics
